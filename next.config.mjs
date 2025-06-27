@@ -11,8 +11,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'www.facebook.com',
-        port: '',
-        pathname: '/**',
+        pathname: '/tr/**',
       },
     ],
   },
