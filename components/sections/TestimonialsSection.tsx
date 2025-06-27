@@ -21,12 +21,12 @@ export function TestimonialsSection() {
       details: "I was getting tons of views on my Reels but no clients. LexLinxs changed everything. Now every video works for my business."
     },
     {
-      quote: "Best investment I've made for my practice",
+      quote: "Best investment I&apos;ve made for my practice",
       author: "Jennifer Rodriguez",
       firm: "Rodriguez Criminal Defense",
       location: "Miami, FL",
       rating: 5,
-      details: "The setup was seamless and the results speak for themselves. I'm booked solid with quality clients from Instagram."
+      details: "The setup was seamless and the results speak for themselves. I&apos;m booked solid with quality clients from Instagram."
     }
   ]
 

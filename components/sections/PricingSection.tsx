@@ -71,7 +71,7 @@ export function PricingSection() {
             Simple, Transparent Pricing
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your firm's growth goals. No hidden fees, no long-term contracts.
+            Choose the plan that fits your firm&apos;s growth goals. No hidden fees, no long-term contracts.
           </p>
         </div>
 
@@ -136,7 +136,7 @@ export function PricingSection() {
             </div>
             <div className="text-left">
               <p className="font-semibold text-navy">72-Hour Setup Guarantee</p>
-              <p className="text-gray-600">If we don't have your funnel live in 72 hours, setup is free</p>
+              <p className="text-gray-600">If we don&apos;t have your funnel live in 72 hours, setup is free</p>
             </div>
           </div>
         </div>
