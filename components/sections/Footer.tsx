@@ -1,6 +1,7 @@
 "use client"
 
 import { Instagram, Linkedin, Mail, Phone } from 'lucide-react'
+import Image from 'next/image'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -39,7 +40,13 @@ export function Footer() {
           <div className="grid lg:grid-cols-4 gap-8">
             {/* Brand Column */}
             <div className="lg:col-span-1">
-              <h3 className="text-2xl font-bold mb-4">LexLinxs Lead Engine™</h3>
+              <Image
+                src="/logo.svg"
+                alt="LexLinxs Lead Engine Logo"
+                width={240}
+                height={48}
+                className="h-12 w-auto mb-4"
+              />
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Turn your social media content into qualified legal leads with our proven short-form video funnels.
               </p>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -48,9 +49,14 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl lg:text-2xl font-bold text-navy">
-              LexLinxs Lead Engine™
-            </h1>
+            <Image
+              src="/logo.svg"
+              alt="LexLinxs Lead Engine Logo"
+              width={200}
+              height={40}
+              className="h-8 lg:h-10 w-auto"
+              priority
+            />
           </div>
 
           {/* Desktop Navigation */}
