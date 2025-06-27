@@ -195,7 +195,7 @@ export function ContactFormModal() {
                     Get Your Setup Call
                   </h3>
                   <p className="text-gray-600">
-                    Let's discuss how LexLinxs can transform your social media into a lead generation machine
+                    Let&apos;s discuss how LexLinxs can transform your social media into a lead generation machine
                   </p>
                 </div>
 
@@ -260,7 +260,7 @@ export function ContactFormModal() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mint focus:border-mint outline-none transition-colors ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mint focus:border-mint outline-colors ${
                         errors.phone ? 'border-red-500' : 'border-gray-300'
                       }`}
                       placeholder="Enter your phone number"
@@ -347,11 +347,11 @@ export function ContactFormModal() {
                   Thank You!
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  We've received your request and will contact you within 24 hours to schedule your setup call.
+                  We&apos;ve received your request and will contact you within 24 hours to schedule your setup call.
                 </p>
                 <div className="bg-gray-50 rounded-lg p-4">
                   <p className="text-sm text-gray-600">
-                    <strong>What's next?</strong><br />
+                    <strong>What&apos;s next?</strong><br />
                     Our team will review your practice area and current marketing, then reach out to schedule a personalized strategy session.
                   </p>
                 </div>

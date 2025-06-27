@@ -59,7 +59,7 @@ export function TestimonialsSection() {
 
               {/* Quote */}
               <blockquote className="text-lg font-bold text-navy mb-4">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </blockquote>
 
               {/* Details */}
