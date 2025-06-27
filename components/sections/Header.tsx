@@ -50,7 +50,7 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Image
-              src="/logo.svg"
+              src="https://lexlinxsprofiles.s3.us-east-2.amazonaws.com/lexlinxs+logo+cropped.png"
               alt="LexLinxs Lead Engine Logo"
               width={200}
               height={40}

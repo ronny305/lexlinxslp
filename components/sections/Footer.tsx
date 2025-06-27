@@ -41,7 +41,7 @@ export function Footer() {
             {/* Brand Column */}
             <div className="lg:col-span-1">
               <Image
-                src="/logo.svg"
+                src="https://lexlinxsprofiles.s3.us-east-2.amazonaws.com/lexlinxs+logo+cropped.png"
                 alt="LexLinxs Lead Engine Logo"
                 width={240}
                 height={48}
