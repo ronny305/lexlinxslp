@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import Script from 'next/script'
+import Image from 'next/image'
 import './globals.css'
 
 const geistSans = localFont({
@@ -48,19 +50,26 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-        <script
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'GA_MEASUREMENT_ID'}`}
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'GA_MEASUREMENT_ID');
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'GA_MEASUREMENT_ID'}');
             `,
           }}
         />
         {/* Meta Pixel */}
-        <script
+        <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -71,17 +80,17 @@ export default function RootLayout({
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', 'YOUR_PIXEL_ID');
+              fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || 'YOUR_PIXEL_ID'}');
               fbq('track', 'PageView');
             `,
           }}
         />
         <noscript>
-          <img
-            height="1"
-            width="1"
+          <Image
+            height={1}
+            width={1}
             style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+            src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || 'YOUR_PIXEL_ID'}&ev=PageView&noscript=1`}
             alt=""
           />
         </noscript>

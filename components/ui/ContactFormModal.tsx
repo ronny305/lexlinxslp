@@ -260,7 +260,7 @@ export function ContactFormModal() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mint focus:border-mint outline-colors ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mint focus:border-mint outline-none transition-colors ${
                         errors.phone ? 'border-red-500' : 'border-gray-300'
                       }`}
                       placeholder="Enter your phone number"
@@ -367,7 +367,9 @@ export function ContactFormModal() {
 // Extend window object for analytics
 declare global {
   interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     gtag: (...args: any[]) => void
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     fbq: (...args: any[]) => void
   }
 }
