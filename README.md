@@ -3,13 +3,11 @@
 
 # CodeGuide Starter Lite
 
-A modern web application starter template built with Next.js 14, featuring authentication, database integration.
+A modern web application starter template built with Next.js 14, featuring modern UI components and responsive design.
 
 ## Tech Stack
 
 - **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
-- **Authentication:** [Clerk](https://clerk.com/)
-- **Database:** [Supabase](https://supabase.com/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
 
@@ -17,8 +15,6 @@ A modern web application starter template built with Next.js 14, featuring authe
 
 Before you begin, ensure you have the following:
 - Node.js 18+ installed
-- A [Clerk](https://clerk.com/) account for authentication
-- A [Supabase](https://supabase.com/) account for database
 - Generated project documents from [CodeGuide](https://codeguide.dev/) for best development experience
 
 ## Getting Started
@@ -38,12 +34,12 @@ Before you begin, ensure you have the following:
    pnpm install
    ```
 
-3. **Environment Variables Setup**
+3. **Environment Variables Setup (Optional)**
    - Copy the `.env.example` file to `.env`:
      ```bash
      cp .env.example .env
      ```
-   - Fill in the environment variables in `.env` (see Configuration section below)
+   - Fill in the environment variables in `.env` if you want to use Google Analytics or Facebook Pixel
 
 4. **Start the development server**
    ```bash
@@ -56,43 +52,25 @@ Before you begin, ensure you have the following:
 
 5. **Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.**
 
-## Configuration
+## Environment Variables (Optional)
 
-### Clerk Setup
-1. Go to [Clerk Dashboard](https://dashboard.clerk.com/)
-2. Create a new application
-3. Go to API Keys
-4. Copy the `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY`
-
-### Supabase Setup
-1. Go to [Supabase Dashboard](https://app.supabase.com/)
-2. Create a new project
-3. Go to Project Settings > API
-4. Copy the `Project URL` as `NEXT_PUBLIC_SUPABASE_URL`
-5. Copy the `anon` public key as `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-
-## Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
+Create a `.env` file in the root directory with the following variables if you want to use analytics:
 
 ```env
-# Clerk Authentication
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
-CLERK_SECRET_KEY=your_secret_key
+# Google Analytics (Optional)
+NEXT_PUBLIC_GA_MEASUREMENT_ID=your_ga_measurement_id
 
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+# Facebook Pixel (Optional)
+NEXT_PUBLIC_FACEBOOK_PIXEL_ID=your_facebook_pixel_id
 ```
 
 ## Features
 
-- 🔐 Authentication with Clerk
-- 📦 Supabase Database
 - 🎨 Modern UI with Tailwind CSS
 - 🚀 App Router Ready
-- 🔄 Real-time Updates
 - 📱 Responsive Design
+- ⚡ Fast Performance
+- 🛠 TypeScript Support
 
 ## Project Structure
 
@@ -103,8 +81,7 @@ codeguide-starter/
 ├── utils/             # Utility functions
 ├── public/            # Static assets
 ├── styles/            # Global styles
-├── documentation/     # Generated documentation from CodeGuide
-└── supabase/          # Supabase configurations and migrations
+└── documentation/     # Generated documentation from CodeGuide
 ```
 
 ## Documentation Setup
